@@ -16,7 +16,7 @@
 		users.users.${config.main-user.userName} = {
 			isNormalUser = true;
 			description = "Main user";
-			extraGroups = [ "wheel" ]; # Enable sudo
+			extraGroups = [ "wheel" "video" ]; # Enables sudo and such
 		};
 	};
 

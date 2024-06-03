@@ -13,8 +13,10 @@
 	];
 
 	# Allow proprietary Software
-	nixpkgs.config.allowUnfree = true;
-
+	nixpkgs.config = {
+		allowUnfree = true;
+		allowUnfreePredicate = (pkg: true);
+	};
 
 	# Allow experimental features
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -112,17 +114,32 @@
 	xclip
 	unzip
 	alsa-utils
+	networkmanagerapplet
+	brightnessctl
+	dunst
+	gvfs
+	mtpfs
+	jmtpfs
+	wireplumber
+	helvum
 
-	# Move below to home manager later
+	# Theming
+	arc-icon-theme
+	bibata-cursors
 
+	# User
 	# Electronics
 	logisim-evolution
 
 	# Art stuff
 	obs-studio
 	krita
+	gimp
 	blender
 	kdenlive
+	audacity
+	inkscape
+	opentabletdriver
 
 	# Misc apps
 	vesktop
@@ -135,26 +152,60 @@
 	keepassxc
 	vlc
 	ark
+	filezilla
+	qbittorrent
+	sioyek
+	ollama
+	calibre
 
 	# Utils
 	pciutils
 	lshw
 	glxinfo
 	vulkan-tools
-	nvtop
+	nvtopPackages.nvidia
 	lxappearance
+	xfce.tumbler
 
-	# Theming
-	arc-icon-theme
-	bibata-cursors
 	];
 
 	# Fonts
 	fonts.packages = with pkgs; [
 	terminus-nerdfont
+	nerdfonts
 	noto-fonts-cjk-serif 
 	hackgen-nf-font
+	ipafont
+	kochi-substitute
+	source-code-pro
+	dejavu_fonts
 	];
+
+	# Default fonts
+	fonts.fontconfig.defaultFonts = {
+		monospace = [
+			"DejaVu Sans Mono"
+			"IPAGothic"
+		];
+		sansSerif = [
+			"DejaVu Sans"
+			"IPAGothic"
+		];
+		serif = [
+			"DejaVu Serif"
+			"IPAPMincho"
+		];
+	};
+
+	# IME enalbing
+	i18n.inputMethod = {
+		enabled = "fcitx5";
+		fcitx5.addons = with pkgs; [
+		fcitx5-mozc
+		fcitx5-gtk
+		fcitx5-configtool
+		];
+	};
 
 	# Home manager
 	home-manager = {
@@ -164,6 +215,9 @@
 		};
 	};
 
+	# Opentablerdriver
+	hardware.opentabletdriver.enable = true;
+	hardware.opentabletdriver.daemon.enable = true;
 
 	# Handle steam (temp location)
 	programs.gamemode.enable = true;
@@ -179,24 +233,24 @@
 	};
 
 
-	# Power management
+	# Power management (Kinda bugged atm)
 	services.tlp = {
-		enable = true;
+		enable = false;
 		settings = {
 			CPU_SCALING_GOVERNOR_ON_AC = "performance";
-        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+			CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
-        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+			CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+			CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
-        CPU_MIN_PERF_ON_AC = 0;
-        CPU_MAX_PERF_ON_AC = 100;
-        CPU_MIN_PERF_ON_BAT = 0;
-        CPU_MAX_PERF_ON_BAT = 20;
+			CPU_MIN_PERF_ON_AC = 0;
+			CPU_MAX_PERF_ON_AC = 100;
+			CPU_MIN_PERF_ON_BAT = 0;
+			CPU_MAX_PERF_ON_BAT = 20;
 
-       # Charge trehsholds
-       START_CHARGE_THRESH_BAT0 = 40;
-       STOP_CHARGE_THRESH_BAT0 = 80; 
+			# Charge trehsholds
+			START_CHARGE_THRESH_BAT0 = 40;
+			STOP_CHARGE_THRESH_BAT0 = 80; 
 		};
 	};
 
