@@ -179,6 +179,7 @@
     calibre
     ffmpeg
     glaxnimate
+    neofetch
 
     # Utils
     pciutils
