@@ -179,7 +179,7 @@
     calibre
     ffmpeg
     glaxnimate
-    snes9x
+    snes9x-gtk
     neofetch
 
     # Utils
