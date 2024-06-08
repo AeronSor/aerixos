@@ -179,6 +179,8 @@
     calibre
     ffmpeg
     glaxnimate
+    snes9x
+    neofetch
 
     # Utils
     pciutils
