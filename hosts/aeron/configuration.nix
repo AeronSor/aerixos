@@ -183,6 +183,8 @@
     glaxnimate
     bsnes-hd
     neofetch
+    mpd
+    ncmpcpp
 
     # Utils
     pciutils
