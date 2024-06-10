@@ -22,53 +22,23 @@
   home.packages = with pkgs; [
   ];
 
-  # GTK
-  #gtk = {
-  #enable = true;
-  # 	theme = {
-  # 		name = "Catppuccin-Macchiato-Standard-Blue-Dark";
-  # 		package = pkgs.libsForQt5.breeze-gtk;
-  # 	};
-  # 	iconTheme = {
-  # 		name = "Papirus-Dark";
-  # 		package = pkgs.catppuccin-papirus-folders.override {
-  # 			flavor = "mocha";
-  # 			accent = "lavender";
-  # 		};
-  # 	};
-  # 	cursorTheme = {
-  # 		name = "Catppuccin-Mocha-Light-Cursors";
-  # 		package = pkgs.catppuccin-cursors.mochaLight;
-  # 	};
-  # 	gtk3 = {
-  # 		extraConfig.gtk-applicatoin-prefer-dark-theme = true;
-  # 	};
-  #};
-
-  # home.pointerCursor = {
-  # 	gtk.enable = true;
-  # 	name = "Catppuccin-Mocha-Dark-Cursors";
-  # 	package = pkgs.catppuccin-cursors.macchiatoDark;
-  # 	size = 16;
-  # };
-
-  # QT
-  #qt = {
-  #enable = true;
-  # 	platformTheme.name = "qtct";
-  # 	style.name = "kvantum";
-  #};
-
-  #Theming
-  #home.catppuccin.flavor = "mocha";
-  #home.catppuccin.enable = true;
-
   home.file = {
     # Set the DPI
     ".Xresources" = {
       text = ''Xft.dpi: 110 '';
       executable = false;
     };
+  };
+
+  programs.bash = {
+    enable = true;
+    # Make the .bashrc import itself from the aerixos folder
+    initExtra = ''
+      if [ -f $HOME/.dotfiles-general/bash/.bashrc ];
+      then
+      	source ~/Repos/aerixos/dotfiles/bash/.bashrc
+      fi
+    '';
   };
 
   home.sessionVariables = {
