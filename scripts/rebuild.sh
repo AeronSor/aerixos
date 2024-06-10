@@ -17,6 +17,7 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild switch --flake ~/Repos/aerixos/#aeron &>nixos-switch.log || (cat nixos-switch.log | grep --collor error && false)
 
 # Nice output
+echo "Successfully built"
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 printf "Current Generation: $gen"

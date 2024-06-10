@@ -123,7 +123,6 @@
     font-manager
     pavucontrol
     ranger
-    xfce.thunar
     zoxide
     htop
     acpi
@@ -190,8 +189,6 @@
     vulkan-tools
     nvtopPackages.nvidia
     lxappearance
-    xfce.tumbler
-    xfce.thunar-volman
     alejandra
   ];
 
@@ -232,6 +229,14 @@
       fcitx5-configtool
     ];
   };
+
+  # Set up thunar
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-volman
+    thunar-archive-plugin
+    tumbler
+  ];
 
   # Home manager
   home-manager = {
