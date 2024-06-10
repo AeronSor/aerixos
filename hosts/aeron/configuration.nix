@@ -29,6 +29,32 @@
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable auto upgrading
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # Print Build logs
+    ];
+    dates = "Friday 20:00";
+    randomizedDelaySec = "20min";
+  };
+
+  # Enable automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "Saturday 10:00";
+    randomizedDelaySec = "20m";
+  };
+
+  # Enable automatic storage optimization
+  nix.optimise = {
+    automatic = true;
+    dates = ["Saturday 12:00"];
+  };
+
   # Use GRUB
   boot.loader.grub = {
     enable = true;
