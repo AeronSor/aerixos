@@ -232,10 +232,11 @@
 
   # Set up thunar
   programs.thunar.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-volman
-    thunar-archive-plugin
-    tumbler
+  programs.thunar.plugins = with pkgs; [
+    gvfs
+    xfce.thunar-volman
+    xfce.thunar-archive-plugin
+    xfce.tumbler
   ];
 
   # Home manager
