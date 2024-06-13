@@ -211,6 +211,8 @@
     neofetch
     mpd
     ncmpcpp
+    emote
+    thonny
 
     # Utils
     pciutils
