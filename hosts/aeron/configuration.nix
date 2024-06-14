@@ -226,6 +226,7 @@
     nvtopPackages.nvidia
     lxappearance
     alejandra
+    xorg.xev
   ];
 
   # Fonts
