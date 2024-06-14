@@ -213,6 +213,7 @@
     ncmpcpp
     emote
     thonny
+    puredata
 
     # Utils
     pciutils
