@@ -175,9 +175,12 @@
     arc-icon-theme
     bibata-cursors
 
-    # User
     # Electronics
     logisim-evolution
+
+    # Audio production
+    puredata
+    supercollider
 
     # Art stuff
     obs-studio
@@ -210,10 +213,10 @@
     bsnes-hd
     neofetch
     mpd
+    mpc-cli
     ncmpcpp
     emote
     thonny
-    puredata
 
     # Utils
     pciutils
