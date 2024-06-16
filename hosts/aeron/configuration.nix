@@ -219,7 +219,7 @@
     emote
     thonny
     xwinwrap
-    wine
+    wineWowPackages.stable
 
     # Utils
     pciutils
