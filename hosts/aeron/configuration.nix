@@ -221,6 +221,7 @@
     xwinwrap
     wineWowPackages.stable
     syncthing
+    stremio
 
     # Utils
     pciutils
