@@ -234,6 +234,7 @@
     xorg.xev
     xorg.xinit
     ventoy
+    udiskie
   ];
 
   # Fonts
