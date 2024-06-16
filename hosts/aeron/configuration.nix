@@ -231,6 +231,7 @@
     alejandra
     xorg.xev
     xorg.xinit
+    ventoy
   ];
 
   # Fonts
