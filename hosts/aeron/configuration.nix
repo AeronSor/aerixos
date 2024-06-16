@@ -19,6 +19,7 @@
   # Allow proprietary Software
   nixpkgs.config = {
     allowUnfree = true;
+    nvidia.acceptLicense = true;
     allowUnfreePredicate = pkg: true;
   };
 
@@ -217,6 +218,8 @@
     ncmpcpp
     emote
     thonny
+    xwinwrap
+    wine
 
     # Utils
     pciutils
@@ -227,6 +230,7 @@
     lxappearance
     alejandra
     xorg.xev
+    xorg.xinit
   ];
 
   # Fonts
@@ -331,11 +335,20 @@
   # NVIDIA (default offload mode)
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
     open = false;
-    nvidiaSettings = true;
+    nvidiaSettings = false;
     #modesetting.enable = true;
   };
+
+  hardware.nvidia.package = let
+  in
+    config.boot.kernelPackages.nvidiaPackages.mkDriver {
+      version = "535.154.05";
+      sha256_64bit = "sha256-fpUGXKprgt6SYRDxSCemGXLrEsIA6GOinp+0eGbqqJg=";
+      settingsSha256 = "sha256-9wqoDEWY4I7weWW05F4igj1Gj9wjHsREFMztfEmqm10=";
+      persistencedSha256 = "sha256-d0Q3Lk80JqkS1B54Mahu2yY/Woc0qFFbZVBh+ToGhaE=";
+      patches = [];
+    };
 
   hardware.nvidia.prime = {
     sync.enable = true;
