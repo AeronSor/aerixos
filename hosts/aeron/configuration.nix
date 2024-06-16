@@ -220,6 +220,7 @@
     thonny
     xwinwrap
     wineWowPackages.stable
+    syncthing
 
     # Utils
     pciutils
