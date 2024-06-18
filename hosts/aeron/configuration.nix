@@ -234,7 +234,7 @@
     xorg.xev
     xorg.xinit
     ventoy
-    udiskie
+    gparted
   ];
 
   # Fonts
