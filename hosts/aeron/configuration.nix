@@ -194,6 +194,7 @@
     opentabletdriver
 
     # Misc apps
+
     # Workaround for vesktop
     (vesktop.override {withSystemVencord = false;})
     obsidian
@@ -223,6 +224,10 @@
     wineWowPackages.stable
     syncthing
     stremio
+    libreoffice
+    hunspell
+    hunspellDicts.pt_BR
+    hunspellDicts.en_US
 
     # Utils
     pciutils
