@@ -194,7 +194,8 @@
     opentabletdriver
 
     # Misc apps
-    vesktop
+    # Workaround for vesktop
+    (vesktop.override {withSystemVencord = false;})
     obsidian
     neovim
     neovide
