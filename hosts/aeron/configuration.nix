@@ -130,6 +130,9 @@
   main-user.enable = true;
   main-user.userName = "aeron";
 
+  # Enable docker
+  virtualisation.docker.enable = true;
+
   # Enable random executables to run
   # maybe a bad idea but I don't have the time to write derivations all the time
   programs.nix-ld.enable = true;
@@ -171,7 +174,6 @@
     gcc # C stuff
     fuse
     ntfs3g
-    docker
     distrobox
 
     # Theming
