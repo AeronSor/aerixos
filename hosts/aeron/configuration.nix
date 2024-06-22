@@ -228,6 +228,7 @@
     hunspell
     hunspellDicts.pt_BR
     hunspellDicts.en_US
+    pcsx2
 
     # Utils
     pciutils
