@@ -171,6 +171,7 @@
     gcc # C stuff
     fuse
     ntfs3g
+    distrobox
 
     # Theming
     arc-icon-theme
