@@ -14,7 +14,7 @@ git diff -U0 hosts/aeron/*.nix
 echo "NixOS Rebuilding..."
 
 # Actual rebuild
-sudo nixos-rebuild switch --flake ~/Repos/aerixos/#aeron &>nixos-switch.log || (cat nixos-switch.log | grep --collor error && false)
+sudo nixos-rebuild switch --flake ~/Repos/aerixos/#aeron
 
 # Nice output
 echo "Successfully built"

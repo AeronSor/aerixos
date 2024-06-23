@@ -23,6 +23,9 @@
     allowUnfreePredicate = pkg: true;
   };
 
+  # Allow flatpak
+  services.flatpak.enable = true;
+
   # Allow experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -108,6 +111,11 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  # Enable XDG Desktop portals
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.config.common.default = "*";
+
   # Pipewire Sound config
   security.rtkit.enable = true;
   services.pipewire = {
@@ -148,7 +156,6 @@
     firefox
     kitty
     git
-    python3
     lua
     go
     nodejs
@@ -246,6 +253,12 @@
     xorg.xinit
     ventoy
     gparted
+    nix-tree
+
+    # Project dependencies
+    # Python stuff
+    #python3
+    python312Packages.tkinter
   ];
 
   # Fonts
