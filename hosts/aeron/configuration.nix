@@ -239,7 +239,10 @@
     hunspell
     hunspellDicts.pt_BR
     hunspellDicts.en_US
+
+    # Emulators
     pcsx2
+    yabause
 
     # Utils
     pciutils
