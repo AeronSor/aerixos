@@ -243,6 +243,7 @@
     # Emulators
     pcsx2
     mednafen
+    mednaffe
 
     # Utils
     pciutils
