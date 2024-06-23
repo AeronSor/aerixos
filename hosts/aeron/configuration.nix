@@ -242,7 +242,7 @@
 
     # Emulators
     pcsx2
-    yabause
+    mednafen
 
     # Utils
     pciutils
