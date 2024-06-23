@@ -247,6 +247,7 @@
     glxinfo
     vulkan-tools
     nvtopPackages.nvidia
+    cudaPackages.autoAddDriverRunpath
     lxappearance
     alejandra
     xorg.xev
