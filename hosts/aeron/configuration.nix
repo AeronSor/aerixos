@@ -247,6 +247,7 @@
 
     # Utils
     pciutils
+    unclutter-xfixes
     lshw
     glxinfo
     vulkan-tools
