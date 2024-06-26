@@ -264,7 +264,6 @@
     # Project dependencies
     # Python stuff
     python3
-    python312Packages.tkinter
   ];
 
   # Fonts
