@@ -260,6 +260,7 @@
     ventoy
     gparted
     nix-tree
+    yt-dlp
 
     # Project dependencies
     # Python stuff
