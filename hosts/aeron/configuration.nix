@@ -182,6 +182,7 @@
     fuse
     ntfs3g
     distrobox
+    easyrpg-player
 
     # Theming
     arc-icon-theme
