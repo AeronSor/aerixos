@@ -142,11 +142,13 @@
   virtualisation.docker.enable = true;
 
   # Enable random executables to run
-  # maybe a bad idea but I don't have the time to write derivations all the time
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add missing dynamic libraries for unpacked programs here
   ];
+
+  # Enable FHS spoofing
+  services.envfs.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
