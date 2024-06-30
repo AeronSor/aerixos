@@ -262,6 +262,7 @@
     gparted
     nix-tree
     yt-dlp
+    bcc
 
     # Project dependencies
     # Python stuff
