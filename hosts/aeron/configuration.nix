@@ -243,6 +243,7 @@
     hunspellDicts.pt_BR
     hunspellDicts.en_US
     bottles
+    lutris
 
     # Emulators
     pcsx2
