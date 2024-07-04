@@ -314,6 +314,7 @@
   # Set up thunar
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs; [
+    xfce.exo
     gvfs
     xfce.thunar-volman
     xfce.thunar-archive-plugin
