@@ -195,6 +195,8 @@
     # Audio production
     puredata
     supercollider
+    #yabridge
+    #yabridgectl
 
     # Art stuff
     obs-studio
