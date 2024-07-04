@@ -322,6 +322,9 @@
   # Enable gvfs
   services.gvfs.enable = true;
 
+  # Enable polkit
+  security.polkit.enable = true;
+
   # Home manager
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
