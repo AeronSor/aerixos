@@ -175,7 +175,6 @@
     networkmanagerapplet
     brightnessctl
     dunst
-    gvfs
     mtpfs
     jmtpfs
     wireplumber
@@ -315,11 +314,13 @@
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs; [
     xfce.exo
-    gvfs
     xfce.thunar-volman
     xfce.thunar-archive-plugin
     xfce.tumbler
   ];
+
+  # Enable gvfs
+  services.gvfs.enable = true;
 
   # Home manager
   home-manager = {
