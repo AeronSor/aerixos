@@ -182,8 +182,8 @@
     gcc # C stuff
     fuse
     ntfs3g
+    lxqt.lxqt-policykit
     distrobox
-    easyrpg-player
 
     # Theming
     arc-icon-theme
@@ -243,6 +243,7 @@
     hunspellDicts.en_US
     bottles
     lutris
+    easyrpg-player
 
     # Emulators
     pcsx2
