@@ -235,6 +235,7 @@
     thonny
     xwinwrap
     wineWowPackages.stable
+    winetricks
     syncthing
     stremio
     libreoffice
