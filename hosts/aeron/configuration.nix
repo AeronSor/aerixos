@@ -170,7 +170,6 @@
     imv
     mpv
     xclip
-    unzip
     alsa-utils
     networkmanagerapplet
     brightnessctl
@@ -270,6 +269,9 @@
     nix-tree
     yt-dlp
     bcc
+    p7zip
+    zip
+    unzip
 
     # Project dependencies
     # Python stuff
