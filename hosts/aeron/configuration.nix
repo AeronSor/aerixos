@@ -272,6 +272,7 @@
     p7zip
     zip
     unzip
+    xorg.xmodmap
 
     # Project dependencies
     # Python stuff
