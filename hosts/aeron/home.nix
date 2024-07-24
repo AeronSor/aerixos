@@ -45,6 +45,11 @@
     EDITOR = "nvim";
   };
 
+  # Set default mimeApps
+  xdg.mimeApps.defaultApplications = {
+    "inode/directory" = ["Thunar.desktop"];
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
