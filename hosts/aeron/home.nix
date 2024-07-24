@@ -46,6 +46,7 @@
   };
 
   # Set default mimeApps
+  xdg.enable = true;
   xdg.mimeApps.defaultApplications = {
     "inode/directory" = ["Thunar.desktop"];
   };
