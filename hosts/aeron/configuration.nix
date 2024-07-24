@@ -116,6 +116,14 @@
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
   xdg.portal.config.common.default = "*";
 
+  # Enable xdg mime and set defaults
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = ["Thunar.desktop"];
+    };
+  };
+
   # Pipewire Sound config
   security.rtkit.enable = true;
   services.pipewire = {
