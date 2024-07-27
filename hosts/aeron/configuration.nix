@@ -260,6 +260,9 @@
     mednafen
     mednaffe
 
+    # Games
+    cataclysm-dda
+
     # Utils
     pciutils
     unclutter-xfixes
