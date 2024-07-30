@@ -202,6 +202,7 @@
     # Audio production
     puredata
     supercollider
+    #renoise in the process of updating it on the nixpkgs
     #yabridge
     #yabridgectl
 
@@ -259,6 +260,7 @@
     pcsx2
     mednafen
     mednaffe
+    duckstation
 
     # Games
     cataclysm-dda
@@ -270,7 +272,7 @@
     glxinfo
     vulkan-tools
     nvtopPackages.nvidia
-    cudaPackages.autoAddDriverRunpath
+    pkgs.autoAddDriverRunpath
     lxappearance
     alejandra
     xorg.xev
@@ -320,7 +322,8 @@
 
   # IME enalbing
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = true;
+    type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-mozc
       fcitx5-gtk
@@ -389,11 +392,7 @@
   };
 
   # OpenGL
-  hardware.opengl = {
-    enable = true;
-    #driSupport = true;
-    #driSupport32Bit = true;
-  };
+  hardware.graphics.enable = true;
 
   # NVIDIA (default offload mode)
   services.xserver.videoDrivers = ["nvidia"];
