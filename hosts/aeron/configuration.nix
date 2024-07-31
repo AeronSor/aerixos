@@ -192,6 +192,10 @@
     lxqt.lxqt-policykit
     distrobox
 
+    # Rust
+    cargo
+    rustc
+
     # Theming
     arc-icon-theme
     bibata-cursors
