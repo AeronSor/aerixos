@@ -291,6 +291,8 @@
     zip
     unzip
     xorg.xmodmap
+    slop
+    maim
 
     # Project dependencies
     # Python stuff
