@@ -291,7 +291,7 @@
     zip
     unzip
     xorg.xmodmap
-    slop
+    picom-pijulius
     maim
 
     # Project dependencies
