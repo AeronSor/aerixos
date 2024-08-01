@@ -206,6 +206,7 @@
     # Audio production
     puredata
     supercollider
+    vcv-rack
     #renoise in the process of updating it on the nixpkgs
     #yabridge
     #yabridgectl
