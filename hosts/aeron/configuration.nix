@@ -260,6 +260,7 @@
     bottles
     lutris
     easyrpg-player
+    foliate
 
     # Emulators
     pcsx2
