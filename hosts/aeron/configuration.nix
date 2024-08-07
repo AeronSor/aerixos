@@ -191,6 +191,7 @@
     ntfs3g
     lxqt.lxqt-policykit
     distrobox
+    cron
 
     # Rust
     cargo
