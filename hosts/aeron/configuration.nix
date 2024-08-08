@@ -492,15 +492,20 @@
   networking.firewall.enable = false;
 
   #SystemD
-  systemd.user.units.eyebreak.name = "eyebreak.service";
-  systemd.user.units.eyebreak.wantedBy = ["multi-user.target"];
-  systemd.user.timers.eyebreak.unitConfig = {
-    Description = "A very simple service";
-    After = "network-up.target";
-  };
 
-  systemd.user.timers.eyebreak.unitConfig = {
-    ExecStart = "/home/aeron/Scripts/cron/eye-break.sh";
+  systemd.services.eyebreak = {
+    wantedBy = ["multi-user.target"];
+    after = ["netowrk.target"];
+    description = "Show the eye reminder";
+
+    serviceConfig = {
+      path = with pkgs; [bash];
+      Type = "notify";
+      User = "aeron";
+      Script = ''
+        bash /home/aeron/Scripts/cron/eye-break.sh
+      '';
+    };
   };
 
   # Copy the NixOS configuration file and link it from the resulting system
