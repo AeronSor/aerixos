@@ -24,7 +24,7 @@
   };
 
   # Allow flatpak
-  services.flatpak.enable = true;
+  #services.flatpak.enable = true;
 
   # Allow experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
