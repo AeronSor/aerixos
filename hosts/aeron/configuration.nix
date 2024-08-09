@@ -262,6 +262,7 @@
     lutris
     easyrpg-player
     foliate
+    losslesscut-bin
 
     # Emulators
     pcsx2
@@ -494,17 +495,15 @@
   #SystemD
 
   systemd.services.eyebreak = {
+    path = with pkgs; [bash dunst dbus];
     wantedBy = ["multi-user.target"];
     after = ["netowrk.target"];
     description = "Show the eye reminder";
 
     serviceConfig = {
-      path = with pkgs; [bash];
-      Type = "notify";
-      User = "aeron";
-      Script = ''
-        bash /home/aeron/Scripts/cron/eye-break.sh
-      '';
+      #Type = "notify";
+      #User = "aeron";
+      ExecStart = "";
     };
   };
 
