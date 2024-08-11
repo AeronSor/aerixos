@@ -343,6 +343,9 @@
     ];
   };
 
+  # Enviroment Variables
+  environment.variables.VLC_PLUGIN_PATH = "${pkgs.vlc-bittorrent}";
+
   # Set up thunar
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs; [
