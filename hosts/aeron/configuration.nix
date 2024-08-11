@@ -264,7 +264,8 @@
     foliate
     losslesscut-bin
     vlc-bittorrent
-    vscodium
+    vscode
+    #vscodium
 
     # Emulators
     pcsx2
