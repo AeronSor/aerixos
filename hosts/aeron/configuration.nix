@@ -263,6 +263,7 @@
     easyrpg-player
     foliate
     losslesscut-bin
+    vlc-bittorrent
 
     # Emulators
     pcsx2
