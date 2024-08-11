@@ -208,7 +208,7 @@
     puredata
     supercollider
     vcv-rack
-    #renoise in the process of updating it on the nixpkgs
+    renoise
     #yabridge
     #yabridgectl
 
