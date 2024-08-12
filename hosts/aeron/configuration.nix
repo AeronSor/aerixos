@@ -26,6 +26,9 @@
   # Allow flatpak
   #services.flatpak.enable = true;
 
+  # Allow Appimages to be ran with appimage-run by default
+  programs.appimage.binfmt = true;
+
   # Allow experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -192,6 +195,7 @@
     lxqt.lxqt-policykit
     distrobox
     cron
+    appimage-run
 
     # Rust
     cargo
