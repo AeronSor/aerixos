@@ -29,6 +29,7 @@
     audacity
     inkscape
     opentabletdriver
+    neovim
   ];
 
   home.file = {
