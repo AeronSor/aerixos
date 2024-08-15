@@ -32,6 +32,12 @@
     helvum
     distrobox
     appimage-run
+    lua
+    go
+    nodejs
+    ranger
+    zoxide
+    python3
 
     # Rust
     cargo
@@ -53,7 +59,6 @@
     #yabridgectl
 
     # Misc apps
-
     # Workaround for vesktop
     (vesktop.override {withSystemVencord = false;})
     obsidian
@@ -127,6 +132,12 @@
     slop
     maim
     picom-pijulius
+    pciutils
+    glxinfo
+    pkgs.autoAddDriverRunpath
+    xorg.xev
+    xorg.xinit
+    ventoy
   ];
 
   home.file = {

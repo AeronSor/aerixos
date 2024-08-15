@@ -181,11 +181,6 @@
     # Base
     wget
     git
-    lua
-    go
-    nodejs
-    ranger
-    zoxide
     xclip
     alsa-utils
     networkmanagerapplet
@@ -199,18 +194,11 @@
     lxqt.lxqt-policykit
 
     # Utils
-    pciutils
     lshw
-    glxinfo
-    pkgs.autoAddDriverRunpath
-    xorg.xev
-    xorg.xinit
-    ventoy
     bcc
     p7zip
     zip
     unzip
-    python3
   ];
 
   # Fonts
