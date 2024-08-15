@@ -20,7 +20,91 @@
   };
 
   home.packages = with pkgs; [
+    # Base
+    kitty
+    font-manager
+    pavucontrol
+    htop
+    acpi
+    imv
+    mpv
+    brightnessctl
+    helvum
+    distrobox
+    appimage-run
+
+    # Rust
+    cargo
+    rustc
+
+    # Theming
+    arc-icon-theme
+    bibata-cursors
+
+    # Electronics
+    logisim-evolution
+
+    # Audio production
+    puredata
+    supercollider
+    vcv-rack
+    renoise
+    #yabridge
+    #yabridgectl
+
+    # Misc apps
+
+    # Workaround for vesktop
+    (vesktop.override {withSystemVencord = false;})
+    obsidian
+    neovim
+    #nvim-pkg
+    neovide
+    flameshot
+    mangohud
+    protonup
+    keepassxc
+    vlc
+    ark
+    filezilla
+    qbittorrent
+    sioyek
+    calibre
+    ffmpeg
+    glaxnimate
+    bsnes-hd
+    neofetch
+    mpd
+    mpc-cli
+    ncmpcpp
+    emote
+    thonny
+    xwinwrap
+    wineWowPackages.stable
+    winetricks
+    syncthing
+    stremio
+    libreoffice
+    hunspell
+    hunspellDicts.pt_BR
+    hunspellDicts.en_US
+    lutris
+    easyrpg-player
+    foliate
+    losslesscut-bin
+
+    # Emulators
+    pcsx2
+    mednafen
+    mednaffe
+    duckstation
+
+    # Games
+    cataclysm-dda
+
     # Art stuff
+    firefox
+    kitty
     obs-studio
     krita
     gimp
@@ -29,7 +113,20 @@
     audacity
     inkscape
     opentabletdriver
-    neovim
+
+    # Utils
+    unclutter-xfixes
+    nvtopPackages.nvidia
+    vulkan-tools
+    alejandra
+    lxappearance
+    nix-tree
+    yt-dlp
+    gparted
+    xorg.xmodmap
+    slop
+    maim
+    picom-pijulius
   ];
 
   home.file = {

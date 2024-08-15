@@ -180,138 +180,36 @@
   environment.systemPackages = with pkgs; [
     # Base
     wget
-    firefox
-    kitty
     git
     lua
     go
     nodejs
-    font-manager
-    pavucontrol
     ranger
     zoxide
-    htop
-    acpi
-    imv
-    mpv
     xclip
     alsa-utils
     networkmanagerapplet
-    brightnessctl
     dunst
     mtpfs
     jmtpfs
     wireplumber
-    helvum
-    gcc # C stuff
+    gcc
     fuse
     ntfs3g
     lxqt.lxqt-policykit
-    distrobox
-    cron
-    appimage-run
-
-    # Rust
-    cargo
-    rustc
-
-    # Theming
-    arc-icon-theme
-    bibata-cursors
-
-    # Electronics
-    logisim-evolution
-
-    # Audio production
-    puredata
-    supercollider
-    vcv-rack
-    renoise
-    #yabridge
-    #yabridgectl
-
-    # Misc apps
-
-    # Workaround for vesktop
-    (vesktop.override {withSystemVencord = false;})
-    obsidian
-    #neovim
-    #nvim-pkg
-    neovide
-    flameshot
-    mangohud
-    protonup
-    keepassxc
-    vlc
-    ark
-    filezilla
-    qbittorrent
-    sioyek
-    ollama
-    calibre
-    ffmpeg
-    glaxnimate
-    bsnes-hd
-    neofetch
-    mpd
-    mpc-cli
-    ncmpcpp
-    emote
-    thonny
-    xwinwrap
-    wineWowPackages.stable
-    winetricks
-    syncthing
-    stremio
-    libreoffice
-    hunspell
-    hunspellDicts.pt_BR
-    hunspellDicts.en_US
-    bottles
-    lutris
-    easyrpg-player
-    foliate
-    losslesscut-bin
-    vlc-bittorrent
-    vscode
-    #vscodium
-
-    # Emulators
-    pcsx2
-    mednafen
-    mednaffe
-    duckstation
-
-    # Games
-    cataclysm-dda
 
     # Utils
     pciutils
-    unclutter-xfixes
     lshw
     glxinfo
-    vulkan-tools
-    nvtopPackages.nvidia
     pkgs.autoAddDriverRunpath
-    lxappearance
-    alejandra
     xorg.xev
     xorg.xinit
     ventoy
-    gparted
-    nix-tree
-    yt-dlp
     bcc
     p7zip
     zip
     unzip
-    xorg.xmodmap
-    picom-pijulius
-    slop
-    maim
-
-    # Project dependencies
-    # Python stuff
     python3
   ];
 

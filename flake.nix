@@ -29,7 +29,7 @@
         modules = [
           ./system/configuration.nix
 
-          # Home manager
+          # Setup Home manager
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
