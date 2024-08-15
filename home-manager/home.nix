@@ -20,6 +20,15 @@
   };
 
   home.packages = with pkgs; [
+    # Art stuff
+    obs-studio
+    krita
+    gimp
+    blender
+    kdenlive
+    audacity
+    inkscape
+    opentabletdriver
   ];
 
   home.file = {

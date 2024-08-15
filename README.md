@@ -1,2 +1,3 @@
 # aerixos
-![temp](./images/temp.png)
+The config to rule them all
+![temp](./.images/temp.png)

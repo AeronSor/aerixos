@@ -17,13 +17,18 @@
   ];
 
   # Home manager
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "aeron" = import ../home-manager/home.nix;
-    };
-  };
+  #home-manager = {
+  #   extraSpecialArgs = {inherit inputs;};
+  #  users = {
+  #    "aeron" = import ../home-manager/home.nix;
+  #  };
+  #};
 
+  # Overlays
+  nixpkgs.overlays = [
+    # For my nvim config
+    #<aeronvim-nix>.overlays.default
+  ];
 
   # Allow proprietary Software
   nixpkgs.config = {
@@ -225,22 +230,13 @@
     #yabridge
     #yabridgectl
 
-    # Art stuff
-    obs-studio
-    krita
-    gimp
-    blender
-    kdenlive
-    audacity
-    inkscape
-    opentabletdriver
-
     # Misc apps
 
     # Workaround for vesktop
     (vesktop.override {withSystemVencord = false;})
     obsidian
-    neovim
+    #neovim
+    #nvim-pkg
     neovide
     flameshot
     mangohud
@@ -358,7 +354,7 @@
     ];
   };
 
-  # Enviroment Variables
+  # Environment Variables
   environment.variables.VLC_PLUGIN_PATH = "${pkgs.vlc-bittorrent}";
 
   # Set up thunar
@@ -376,7 +372,7 @@
   # Enable polkit
   security.polkit.enable = true;
 
-   # Opentablerdriver
+  # Opentablerdriver
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
 

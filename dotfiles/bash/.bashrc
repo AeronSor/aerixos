@@ -15,7 +15,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Quick config
-alias aeronvim-edit='cd ~/Repos/AeroNvim/ && ranger'
+alias aeronvim-edit='cd ~/Repos/aeronvim/ && ranger'
 alias awm='cd ~/.config/awesome/ && ranger'
 
 alias aerixos-rebuild='sh ~/Repos/aerixos/scripts/nixos/rebuild.sh'

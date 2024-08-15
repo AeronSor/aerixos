@@ -1,5 +1,5 @@
 {
-  description = "Flake config for hosts";
+  description = "Flake config for my machine";
 
   inputs = {
     nixpkgs = {
@@ -10,20 +10,32 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #aeronvim-nix = {
+    #  url = "github:AeronSor/aeronvim-nix";
+    #};
   };
 
-  outputs = {
-    self,
+  outputs = inputs @ {
     nixpkgs,
+    home-manager,
+    #aeronvim-nix,
     ...
-  } @ inputs: {
+  }: {
     nixosConfigurations = {
       aeron = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
           ./system/configuration.nix
-          inputs.home-manager.nixosModules.default
+
+          # Home manager
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.aeron = import ./home-manager/home.nix;
+          }
         ];
       };
     };
