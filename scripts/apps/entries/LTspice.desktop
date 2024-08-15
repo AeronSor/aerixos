@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=LTspice
-Exec=env WINEPREFIX="/home/aeron/Applications/ltspice" wine C:\\\\ADI\\\\LTspice\\\\LTspice.exe 
-Type=Application
-StartupNotify=true
-Path=/home/aeron/Applications/ltspice/dosdevices/c:/ADI/LTspice/
-Icon=837B_LTspice.0
-StartupWMClass=ltspice.exe

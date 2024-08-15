@@ -18,7 +18,7 @@ alias grep='grep --color=auto'
 alias aeronvim-edit='cd ~/Repos/AeroNvim/ && ranger'
 alias awm='cd ~/.config/awesome/ && ranger'
 
-alias aerixos-rebuild='sh ~/Repos/aerixos/scripts/rebuild.sh'
+alias aerixos-rebuild='sh ~/Repos/aerixos/scripts/nixos/rebuild.sh'
 alias aerixos-edit='cd ~/Repos/aerixos/ && ranger .'
 alias aerixos-test='cd ~/Repos/aerixos/ && sudo nixos-rebuild test --flake ~/Repos/aerixos/#aeron'
 
@@ -28,7 +28,7 @@ alias band='bandcamp-dl -ferku'
 
 ### Put my Scripts on path----------------------------------------------
 
-export PATH=$PATH:~/Scripts/
+export PATH=$PATH:~/Repos/aerixos/scripts/
 
 ### --------------------------------------------------------------------
 

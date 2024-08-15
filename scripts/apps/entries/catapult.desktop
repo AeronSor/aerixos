@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Catapult
-Exec=bash -c "sh ~/Scripts/apps/catapult.sh"
-Type=Application
-StartupNotify=true
-Path=/home/aeron/Games/Catapult
-Icon=catapult
