@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CircuitJS
+Exec=bash -c "sh ~/Scripts/apps/falstad.sh"
+Type=Application
+StartupNotify=true
+Path=/home/aeron/Applications/circuitjs1/
+Icon=falstad
+StartupWMClass=circuitjs1

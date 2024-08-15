@@ -6,26 +6,20 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: {
+  outputs = { self, nixpkgs,... } @ inputs: {
     nixosConfigurations = {
       aeron = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/aeron/configuration.nix
+          ./system/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
     };

@@ -6,33 +6,25 @@
 
 PS1='[\u@\h \W]\$ '
 #PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
+BASH_PATH=~/Repos/aerixos/dotfiles/bash/.bashrc
 
 ### ALIAS ### ---------------------------------------------------------
-alias ba='nvim ~/.bashrc'
-alias src='source ~/.bashrc'
+alias ba='nvim $BASH_PATH'
+alias src='source $BASH_PATH'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-alias dot-w='cd ~/.dotfiles-wayland/ && ranger'
-alias hype='cd ~/.config/hypr/ && ranger'
-alias elko='cd ~/.config/eww/ && ranger'
-
-alias dot-x='cd ~/.dotfiles-xorg/ && ranger'
-alias bs='cd ~/.config/bspwm/ && ranger'
-alias sx='cd ~/.config/sxhkd/ && ranger'
-alias po='cd ~/.config/polybar/ && ranger'
-
-alias dot-g='cd ~/.dotfiles-general/ && ranger'
-alias nvcfg='cd ~/Repos/AeroNvim/ && ranger'
-alias coding='cd ~/Projects/Coding/ && ranger'
-
+# Quick config
+alias aeronvim-edit='cd ~/Repos/AeroNvim/ && ranger'
 alias awm='cd ~/.config/awesome/ && ranger'
 
-alias band='bandcamp-dl -ferku'
-
 alias aerixos-rebuild='sh ~/Repos/aerixos/scripts/rebuild.sh'
-alias aerixos-test='cd ~/Repos/aerixos/ && sudo nixos-rebuild test --flake ~/Repos/aerixos/#aeron'
 alias aerixos-edit='cd ~/Repos/aerixos/ && ranger .'
+alias aerixos-test='cd ~/Repos/aerixos/ && sudo nixos-rebuild test --flake ~/Repos/aerixos/#aeron'
+
+# Misc
+alias coding='cd ~/Projects/Coding/ && ranger'
+alias band='bandcamp-dl -ferku'
 
 ### Put my Scripts on path----------------------------------------------
 
