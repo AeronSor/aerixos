@@ -19,7 +19,7 @@
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    #aeronvim-nix,
+    aeronvim-nix,
     ...
   }: {
     nixosConfigurations = {
