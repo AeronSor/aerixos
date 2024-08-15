@@ -16,6 +16,15 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  # Home manager
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "aeron" = import ../home-manager/home.nix;
+    };
+  };
+
+
   # Allow proprietary Software
   nixpkgs.config = {
     allowUnfree = true;
@@ -367,15 +376,7 @@
   # Enable polkit
   security.polkit.enable = true;
 
-  # Home manager
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "aeron" = import ../home-manager/home.nix;
-    };
-  };
-
-  # Opentablerdriver
+   # Opentablerdriver
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
 
