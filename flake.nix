@@ -11,9 +11,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #aeronvim-nix = {
-    #  url = "github:AeronSor/aeronvim-nix";
-    #};
+    aeronvim-nix = {
+      url = "github:AeronSor/aeronvim-nix";
+    };
   };
 
   outputs = inputs @ {
