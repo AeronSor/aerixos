@@ -97,6 +97,7 @@
     easyrpg-player
     foliate
     losslesscut-bin
+    zeal
 
     # Emulators
     pcsx2
