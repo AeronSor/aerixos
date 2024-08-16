@@ -138,6 +138,13 @@
     xorg.xev
     xorg.xinit
     ventoy
+
+    # LSPs for Neovim
+    rust-analyzer
+    vimPlugins.clang_complete
+    luajitPackages.lua-lsp
+    gopls
+    pyright
   ];
 
   home.file = {
