@@ -17,12 +17,12 @@
   ];
 
   # Home manager
-  #home-manager = {
-  #   extraSpecialArgs = {inherit inputs;};
-  #  users = {
-  #    "aeron" = import ../home-manager/home.nix;
-  #  };
-  #};
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "aeron" = import ../home-manager/home.nix;
+    };
+  };
 
   # Overlays
   nixpkgs.overlays = [
@@ -199,6 +199,7 @@
     p7zip
     zip
     unzip
+    unrar
   ];
 
   # Fonts
@@ -387,19 +388,19 @@
 
   #SystemD
 
-  systemd.services.eyebreak = {
-    path = with pkgs; [bash dunst dbus];
-    wantedBy = ["multi-user.target"];
-    after = ["netowrk.target"];
-    description = "Show the eye reminder";
-
-    serviceConfig = {
-      #Type = "notify";
-      #User = "aeron";
-      ExecStart = "";
-    };
-  };
-
+  # systemd.services.eyebreak = {
+  #   path = with pkgs; [bash dunst dbus];
+  #   wantedBy = ["multi-user.target"];
+  #   after = ["netowrk.target"];
+  #   description = "Show the eye reminder";
+  #
+  #   serviceConfig = {
+  #     #Type = "notify";
+  #     #User = "aeron";
+  #     ExecStart = "";
+  #   };
+  # };
+  #
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.

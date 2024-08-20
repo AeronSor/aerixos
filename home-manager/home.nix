@@ -19,6 +19,19 @@
     userEmail = "aeronsor@gmail.com";
   };
 
+  # Neovim
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
+  # Handle neovim packages with nixpkgs instead of mason or other plugin
+  # Why? it makes more sense in a nixOS system and this way I can avoid
+  # messing with my stock neovim config
+  #plugins = with pkgs.vimPlugins; [
+  #];
+  #}
+
   home.packages = with pkgs; [
     # Base
     kitty
@@ -62,8 +75,6 @@
     # Workaround for vesktop
     (vesktop.override {withSystemVencord = false;})
     obsidian
-    neovim
-    #nvim-pkg
     neovide
     flameshot
     mangohud
@@ -77,7 +88,6 @@
     calibre
     ffmpeg
     glaxnimate
-    bsnes-hd
     neofetch
     mpd
     mpc-cli
@@ -98,12 +108,14 @@
     foliate
     losslesscut-bin
     zeal
+    soulseekqt
 
     # Emulators
     pcsx2
     mednafen
     mednaffe
     duckstation
+    bsnes-hd
 
     # Games
     cataclysm-dda
