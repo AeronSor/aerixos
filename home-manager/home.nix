@@ -108,7 +108,7 @@
     foliate
     losslesscut-bin
     zeal
-    soulseekqt
+    nicotine-plus
 
     # Emulators
     pcsx2
