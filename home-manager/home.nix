@@ -109,6 +109,7 @@
     losslesscut-bin
     zeal
     nicotine-plus
+    gmic-qt
 
     # Emulators
     pcsx2
