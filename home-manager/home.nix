@@ -111,7 +111,8 @@
     zeal
     nicotine-plus
     gmic-qt
-    rnote
+    #rnote
+    xournalpp
 
     # Emulators
     pcsx2
