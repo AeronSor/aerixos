@@ -119,6 +119,9 @@
     # Display manager
     displayManager.lightdm.enable = true;
 
+    # Disable mouse acceleration
+    libinput.mouse.accelProfile = "flat";
+
     # Window manager
     windowManager.awesome = {
       enable = true;
