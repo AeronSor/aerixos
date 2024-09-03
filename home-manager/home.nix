@@ -62,7 +62,7 @@
 
     # Electronics
     logisim-evolution
-    #quartus-prime-lite
+    quartus-prime-lite
 
     # Audio production
     puredata
