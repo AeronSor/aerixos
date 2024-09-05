@@ -173,6 +173,7 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add missing dynamic libraries for unpacked programs here
+    glib
   ];
 
   # Enable FHS spoofing
