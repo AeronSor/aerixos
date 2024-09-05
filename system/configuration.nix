@@ -172,33 +172,35 @@
   # Enable random executables to run
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    # Add missing dynamic libraries for unpacked programs here
-    # glib
-    # xorg.libX11
-    # xorg.libxcb
-    # xorg.libXcomposite
-    # xorg.libXcursor
-    # xorg.libXdamage
-    # xorg.libXext
-    # xorg.libXfixes
-    # xorg.libXi
-    # xorg.libXrender
-    # xorg.libXtst
-    # nss
-    # nspr
-    # at-spi2-atk
-    # dbus
-    # gdk-pixbuf
-    # gtk3
-    # pango
-    # cairo
-    # xorg.libXrandr
-    # expat
-    # libdrm
-    # mesa
-    # xorg.libXScrnSaver
-    # alsa-lib
-    # cups
+    #Add missing dynamic libraries for unpacked programs here
+    # Probably better to make a shell, but I can't make it work
+    # So I'll just do it this way instead.
+    glib
+    xorg.libX11
+    xorg.libxcb
+    xorg.libXcomposite
+    xorg.libXcursor
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXi
+    xorg.libXrender
+    xorg.libXtst
+    nss
+    nspr
+    at-spi2-atk
+    dbus
+    gdk-pixbuf
+    gtk3
+    pango
+    cairo
+    xorg.libXrandr
+    expat
+    libdrm
+    mesa
+    xorg.libXScrnSaver
+    alsa-lib
+    cups
   ];
 
   # Enable FHS spoofing
