@@ -203,12 +203,21 @@
     cups
   ];
 
+  # Rstudio override
+
   # Enable FHS spoofing
   services.envfs.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; let
+    RStudio-with-my-packages = rstudioWrapper.override {
+      packages = with rPackages; [tidyverse];
+    };
+  in [
+    #Overrides
+    RStudio-with-my-packages
+
     # Base
     wget
     git
