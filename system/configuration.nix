@@ -203,8 +203,6 @@
     cups
   ];
 
-  # Rstudio override
-
   # Enable FHS spoofing
   services.envfs.enable = true;
 

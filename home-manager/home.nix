@@ -155,7 +155,6 @@
     xorg.xev
     xorg.xinit
     ventoy
-    rstudio
 
     # LSPs for Neovim
     rust-analyzer
