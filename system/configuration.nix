@@ -210,7 +210,19 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; let
     RStudio-with-my-packages = rstudioWrapper.override {
-      packages = with rPackages; [tidyverse];
+      packages = with rPackages; [
+        dplyr
+        tidyr
+        stringr
+        lubridate
+        httr
+        ggvis
+        ggplot2
+        shiny
+        rio
+        rmarkdown
+        tidyverse
+      ];
     };
   in [
     #Overrides
