@@ -155,6 +155,7 @@
     xorg.xev
     xorg.xinit
     ventoy
+    ncdu
 
     # LSPs for Neovim
     rust-analyzer
