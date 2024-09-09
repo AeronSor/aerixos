@@ -84,6 +84,10 @@
     efiSupport = true;
   };
 
+  # Enable printing
+  services.printing.enable = true;
+  services.printing.cups-pdf.enable = true;
+
   networking.hostName = "aeron"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

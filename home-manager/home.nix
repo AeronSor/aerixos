@@ -112,7 +112,6 @@
     nicotine-plus
     gmic-qt
     xournalpp
-    cups
 
     # Emulators
     pcsx2
