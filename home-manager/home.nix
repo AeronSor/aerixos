@@ -63,6 +63,8 @@
     # Electronics
     logisim-evolution
     quartus-prime-lite
+    kicad
+    ngspice
 
     # Audio production
     puredata
