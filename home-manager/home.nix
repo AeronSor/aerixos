@@ -124,6 +124,7 @@
 
     # Games
     cataclysm-dda
+    gzdoom
 
     # Art stuff
     firefox
