@@ -98,8 +98,12 @@
     emote
     thonny
     xwinwrap
-    wineWowPackages.stable
+
+    # Wine stuff
+    wineWowPackages.staging
     winetricks
+    wineasio
+
     syncthing
     stremio
     libreoffice
