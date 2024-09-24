@@ -70,6 +70,7 @@
     puredata
     supercollider
     vcv-rack
+    cardinal
     renoise
     #yabridge
     #yabridgectl
