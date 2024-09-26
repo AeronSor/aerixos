@@ -72,6 +72,7 @@
     vcv-rack
     cardinal
     renoise
+    carla
     #yabridge
     #yabridgectl
 
