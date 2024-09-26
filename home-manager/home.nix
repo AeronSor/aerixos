@@ -73,8 +73,8 @@
     cardinal
     renoise
     carla
-    #yabridge
-    #yabridgectl
+    yabridge
+    yabridgectl
 
     # Misc apps
     # Workaround for vesktop
