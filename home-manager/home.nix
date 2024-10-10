@@ -65,6 +65,7 @@
     quartus-prime-lite
     kicad
     ngspice
+    arduino
 
     # Audio production
     puredata
