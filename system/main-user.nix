@@ -19,7 +19,7 @@
     users.users.${config.main-user.userName} = {
       isNormalUser = true;
       description = "Main user";
-      extraGroups = ["wheel" "video"]; # Enables sudo and such
+      extraGroups = ["wheel" "video" "dialout"]; # Enables sudo and such
     };
   };
 }
