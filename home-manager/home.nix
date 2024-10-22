@@ -198,11 +198,11 @@
     EDITOR = "nvim";
   };
 
-  # Theme config
+  # Cursor theming
   xsession.pointerCursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
-    size = 40;
+    size = 20;
   };
 
   # Let Home Manager install and manage itself.
