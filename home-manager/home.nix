@@ -51,7 +51,6 @@
     ranger
     zoxide
     python3
-    rose-pine-gtk-theme
 
     # Rust
     cargo
@@ -60,6 +59,7 @@
     # Theming
     arc-icon-theme
     bibata-cursors
+    rose-pine-gtk-theme
 
     # Electronics
     logisim-evolution
@@ -196,6 +196,13 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  # Theme config
+  xsession.pointerCursor = {
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+    size = 40;
   };
 
   # Let Home Manager install and manage itself.
