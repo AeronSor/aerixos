@@ -202,7 +202,7 @@
   xsession.pointerCursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
-    size = 20;
+    size = 24;
   };
 
   # Let Home Manager install and manage itself.
