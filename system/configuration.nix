@@ -121,7 +121,10 @@
     xkb.layout = "br";
 
     # Display manager
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      greeters.slick.enable = true;
+    };
 
     # Disable mouse acceleration
     libinput.mouse.accelProfile = "flat";
