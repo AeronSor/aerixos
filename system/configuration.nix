@@ -124,7 +124,7 @@
     displayManager.lightdm = {
       enable = true;
       greeters.slick.enable = true;
-      greeters.slick.theme.name = "Adwaita";
+      greeters.slick.theme.name = "rose-pine-gtk";
     };
 
     # Disable mouse acceleration

@@ -51,6 +51,7 @@
     ranger
     zoxide
     python3
+    rose-pine-gtk-theme
 
     # Rust
     cargo
