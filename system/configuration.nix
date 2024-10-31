@@ -66,14 +66,12 @@
   # Enable automatic garbage collection
   nix.gc = {
     automatic = true;
-    dates = "Saturday 10:00";
-    randomizedDelaySec = "20m";
+    options = "--delete-older-than 30d";
   };
 
   # Enable automatic storage optimization
   nix.optimise = {
     automatic = true;
-    dates = ["Saturday 12:00"];
   };
 
   # Use GRUB
@@ -361,18 +359,19 @@
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     open = false;
-    nvidiaSettings = true;
+    nvidiaSettings = false;
     #modesetting.enable = true;
   };
 
   hardware.nvidia.package = let
   in
     config.boot.kernelPackages.nvidiaPackages.mkDriver {
-      version = "535.154.05";
-      sha256_64bit = "sha256-fpUGXKprgt6SYRDxSCemGXLrEsIA6GOinp+0eGbqqJg=";
-      settingsSha256 = "sha256-9wqoDEWY4I7weWW05F4igj1Gj9wjHsREFMztfEmqm10=";
-      persistencedSha256 = "sha256-d0Q3Lk80JqkS1B54Mahu2yY/Woc0qFFbZVBh+ToGhaE=";
-      patches = [];
+      version = "560.35.03";
+      sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
+      sha256_aarch64 = "sha256-s8ZAVKvRNXpjxRYqM3E5oss5FdqW+tv1qQC2pDjfG+s=";
+      openSha256 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
+      settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
+      persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
     };
 
   hardware.nvidia.prime = {

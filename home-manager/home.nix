@@ -63,24 +63,25 @@
 
     # Electronics
     logisim-evolution
-    quartus-prime-lite
-    kicad
-    ngspice
+    #quartus-prime-lite this takes AGES to install, I'm just gonna use this on windows for now on
+    #kicad
+    #ngspice
     arduino-ide
 
     # Audio production
-    puredata
-    supercollider
+    #puredata
+    #supercollider
     vcv-rack
-    cardinal
+    #cardinal
     renoise
     carla
-    yabridge
-    yabridgectl
+    #yabridge
+    #yabridgectl
 
     # Misc apps
     # Workaround for vesktop
     (vesktop.override {withSystemVencord = false;})
+    firefox
     obsidian
     neovide
     flameshot
@@ -100,13 +101,13 @@
     mpc-cli
     ncmpcpp
     emote
-    thonny
-    xwinwrap
+    #thonny
+    #xwinwrap
 
     # Wine stuff
     wineWowPackages.staging
     winetricks
-    wineasio
+    #wineasio
 
     syncthing
     stremio
@@ -118,25 +119,23 @@
     easyrpg-player
     foliate
     losslesscut-bin
-    zeal
-    nicotine-plus
-    gmic-qt
+    #zeal
+    #nicotine-plus
+    #gmic-qt
     xournalpp
 
     # Emulators
     pcsx2
-    mednafen
-    mednaffe
+    #mednafen
+    #mednaffe
     duckstation
-    bsnes-hd
+    #bsnes-hd
 
     # Games
     cataclysm-dda
-    gzdoom
+    #gzdoom
 
     # Art stuff
-    firefox
-    kitty
     obs-studio
     krita
     gimp
