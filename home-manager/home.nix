@@ -67,6 +67,7 @@
     #kicad
     #ngspice
     arduino-ide
+    processing
 
     # Audio production
     #puredata
