@@ -102,8 +102,8 @@
     mpc-cli
     ncmpcpp
     emote
-    #thonny
-    #xwinwrap
+    thonny
+    xwinwrap
 
     # Wine stuff
     wineWowPackages.staging
