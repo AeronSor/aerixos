@@ -465,6 +465,13 @@
     };
   };
 
+  systemd.services."eye-break" = {
+    description = "Eye break every 30 minutes";
+    # Path of script
+    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash ~/Repos/aerixos/scripts/reminders/eye-break.sh";
+    serviceConfig.Restart = "no";
+  };
+
   # systemd.services.eyebreak = {
   #   path = with pkgs; [bash dunst dbus];
   #   wantedBy = ["multi-user.target"];
