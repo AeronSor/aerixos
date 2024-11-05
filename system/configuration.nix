@@ -468,7 +468,7 @@
   systemd.services."eye-break" = {
     description = "Eye break every 30 minutes";
     # Path of script
-    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash ~/Repos/aerixos/scripts/reminders/eye-break.sh";
+    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
     serviceConfig.Restart = "no";
   };
 
