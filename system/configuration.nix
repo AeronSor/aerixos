@@ -447,7 +447,7 @@
 
   # Eye break service
   systemd.services."eye-break" = {
-    description = "Eye break every 30 minutes";
+    description = "Eye break notifcation";
     # Path of script
     serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
 
@@ -462,13 +462,68 @@
     ];
   };
 
-  # Eye break timer
-  systemd.timers."eye-timer" = {
-    description = "Run Eye break every 30 minutes";
+  # Water break service
+  systemd.services."water-break" = {
+    description = "Water break notifcation";
+    # Path of script
+    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/water-break.sh";
+
+    serviceConfig.User = "aeron";
+    serviceConfig.Restart = "no";
+
+    # Adding dunst to enviroment and setting up other stuff
+    serviceConfig.Environment = [
+      "DISPLAY=:0" # Specifying display
+      "PATH=${pkgs.dunst}/bin:${pkgs.bash}/bin:/run/current-system/sw/bin:$PATH"
+      "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" # Specify the DBus session path
+    ];
+  };
+
+  # Stretch break service
+  systemd.services."stretch-break" = {
+    description = "Eye break notifcation";
+    # Path of script
+    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/stretch-break.sh";
+
+    serviceConfig.User = "aeron";
+    serviceConfig.Restart = "no";
+
+    # Adding dunst to enviroment and setting up other stuff
+    serviceConfig.Environment = [
+      "DISPLAY=:0" # Specifying display
+      "PATH=${pkgs.dunst}/bin:${pkgs.bash}/bin:/run/current-system/sw/bin:$PATH"
+      "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" # Specify the DBus session path
+    ];
+  };
+
+  # 15 break timer
+  systemd.timers."break-30-timer" = {
+    description = "Run every 30 minutes";
+    wantedBy = ["timers.target"];
 
     timerConfig = {
-      OnCalendar = "*:0/15";
+      OnCalendar = "*:0/30";
       Unit = "eye-break.service";
+    };
+  };
+
+  systemd.timers."break-35-timer" = {
+    description = "Run every 35 minutes";
+    wantedBy = ["timers.target"];
+
+    timerConfig = {
+      OnCalendar = "*:0/35";
+      Unit = "water-break.service";
+    };
+  };
+
+  systemd.timers."break-1h-timer" = {
+    description = "Run every 1 hour";
+    wantedBy = ["timers.target"];
+
+    timerConfig = {
+      OnCalendar = "*-*-* *:00:00";
+      Unit = "stretch-break.service";
     };
   };
 
