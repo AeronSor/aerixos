@@ -472,10 +472,11 @@
 
     serviceConfig.Restart = "no";
 
-    # Adding dunst to enviroment
+    # Adding dunst to enviroment and setting up other stuff
     serviceConfig.Environment = [
-      "DISPLAY=:0"
+      "DISPLAY=:0" # Specifying display
       "PATH=${pkgs.dunst}/bin:${pkgs.bash}/bin:/run/current-system/sw/bin:$PATH"
+      "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" # Specify the DBus session path
     ];
   };
 
