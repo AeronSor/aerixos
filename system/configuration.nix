@@ -470,6 +470,7 @@
     # Path of script
     serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
 
+    serviceConfig.User = "aeron";
     serviceConfig.Restart = "no";
 
     # Adding dunst to enviroment and setting up other stuff
