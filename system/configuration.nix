@@ -469,7 +469,14 @@
     description = "Eye break every 30 minutes";
     # Path of script
     serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
+
     serviceConfig.Restart = "no";
+
+    # Adding dunst to enviroment
+    serviceConfig.Environment = [
+      "DISPLAY=:0"
+      "PATH=${pkgs.dunst}/bin:${pkgs.bash}/bin:/run/current-system/sw/bin:$PATH"
+    ];
   };
 
   # systemd.services.eyebreak = {
