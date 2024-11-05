@@ -1,1 +1,1 @@
-dunstify "Hydrate now!!!" -u critical -i ~/Scripts/cron/water-alt.png -t 15000
+dunstify "Hydrate now!!!" -u critical -i ~/Repos/aerixos/scripts/reminders/water.png -t 15000

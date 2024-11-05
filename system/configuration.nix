@@ -445,26 +445,7 @@
 
   # SystemD
 
-  systemd.timers."hello-world" = {
-    wantedBy = ["timers.target"];
-    timerConfig = {
-      OnBootSec = "5m";
-      OnUnitActiveSec = "5m";
-      Unit = "hello-world.service";
-    };
-  };
-
-  systemd.services."hello-world" = {
-    script = ''
-      set -eu
-      ${pkgs.coreutils}/bin/echo "Hello world"
-    '';
-    serviceConfig = {
-      Type = "oneshot";
-      User = "root";
-    };
-  };
-
+  # Eye break service
   systemd.services."eye-break" = {
     description = "Eye break every 30 minutes";
     # Path of script
@@ -481,19 +462,16 @@
     ];
   };
 
-  # systemd.services.eyebreak = {
-  #   path = with pkgs; [bash dunst dbus];
-  #   wantedBy = ["multi-user.target"];
-  #   after = ["netowrk.target"];
-  #   description = "Show the eye reminder";
-  #
-  #   serviceConfig = {
-  #     #Type = "notify";
-  #     #User = "aeron";
-  #     ExecStart = "";
-  #   };
-  # };
-  #
+  # Eye break timer
+  systemd.timers."eye-timer" = {
+    description = "Run Eye break every 30 minutes";
+
+    timerConfig = {
+      OnCalendar = "*:0/15";
+      Unit = "eye-break.service";
+    };
+  };
+
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.

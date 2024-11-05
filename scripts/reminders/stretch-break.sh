@@ -1,1 +1,1 @@
-dunstify "Stretch!" -u critical -i ~/Scripts/cron/stretch.png -t 15000
+dunstify "Stretch!" -u critical -i ~/Repos/aerixos/scripts/reminders/stretch.png -t 15000
