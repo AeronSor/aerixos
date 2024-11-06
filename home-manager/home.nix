@@ -75,6 +75,7 @@
     vcv-rack
     #cardinal
     renoise
+    milkytracker
     carla
     #yabridge
     #yabridgectl
