@@ -67,6 +67,8 @@
     #kicad
     #ngspice
     arduino-ide
+
+    gsettings-desktop-schemas
     processing
 
     # Audio production
