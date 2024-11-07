@@ -64,8 +64,8 @@
     # Electronics
     logisim-evolution
     #quartus-prime-lite this takes AGES to install, I'm just gonna use this on windows for now on
-    #kicad
-    #ngspice
+    kicad
+    ngspice
     arduino-ide
 
     gsettings-desktop-schemas
