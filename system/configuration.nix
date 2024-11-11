@@ -228,6 +228,7 @@
         rio
         rmarkdown
         tidyverse
+        EnvStats
       ];
     };
   in [
