@@ -169,6 +169,7 @@
     xorg.xinit
     ventoy
     ncdu
+    epsonscan2
 
     # LSPs for Neovim
     rust-analyzer
