@@ -72,10 +72,10 @@
     processing
 
     # Audio production
-    #puredata
-    #supercollider
+    puredata
+    supercollider
     vcv-rack
-    #cardinal
+    cardinal
     renoise
     milkytracker
     carla
@@ -99,13 +99,13 @@
     sioyek
     calibre
     ffmpeg
-    glaxnimate
+    #glaxnimate
     neofetch
     mpd
     mpc-cli
     ncmpcpp
     emote
-    thonny
+    #thonny
     xwinwrap
 
     # Wine stuff
@@ -148,6 +148,7 @@
     audacity
     inkscape
     opentabletdriver
+    godot_4
 
     # Utils
     unclutter-xfixes
@@ -169,7 +170,7 @@
     xorg.xinit
     ventoy
     ncdu
-    epsonscan2
+    #epsonscan2
 
     # LSPs for Neovim
     rust-analyzer
