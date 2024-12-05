@@ -181,13 +181,13 @@
     pyright
   ];
 
-  home.file = {
-    # Set the DPI
-    ".Xresources" = {
-      text = ''Xft.dpi: 110 '';
-      executable = false;
-    };
-  };
+  #home.file = {
+  # Set the DPI
+  #".Xresources" = {
+  #  text = ''Xft.dpi: 110 '';
+  #  executable = false;
+  #};
+  #};
 
   programs.bash = {
     enable = true;
@@ -205,7 +205,8 @@
   };
 
   # Cursor theming
-  xsession.pointerCursor = {
+  home.pointerCursor = {
+    x11.enable = true;
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
     size = 24;

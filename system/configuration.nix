@@ -125,14 +125,14 @@
       greeters.slick.theme.name = "rose-pine-gtk";
     };
 
-    # Disable mouse acceleration
-    libinput.mouse.accelProfile = "flat";
-
     # Window manager
     windowManager.awesome = {
       enable = true;
     };
   };
+
+  # Remove mouse acceleration
+  services.libinput.mouse.accelProfile = "flat";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
