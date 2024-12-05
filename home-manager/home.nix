@@ -67,6 +67,7 @@
     kicad
     ngspice
     arduino-ide
+    fritzing
 
     gsettings-desktop-schemas
     processing
