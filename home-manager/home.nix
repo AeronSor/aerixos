@@ -185,8 +185,8 @@
     #Set the DPI
     ".Xresources" = {
       text = ''        Xft.dpi: 110 
-              Xcursor.size: 24
-              Xcursor.theme: Bibata-Modern-Ice'';
+        Xcursor.size: 24
+        Xcursor.theme: Bibata-Modern-Ice'';
       executable = false;
     };
   };
