@@ -89,6 +89,7 @@
     firefox
     obsidian
     neovide
+    vscode
     flameshot
     mangohud
     protonup
