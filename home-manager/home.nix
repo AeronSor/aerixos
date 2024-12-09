@@ -109,6 +109,7 @@
     emote
     #thonny
     xwinwrap
+    kcc
 
     # Wine stuff
     wineWowPackages.staging
