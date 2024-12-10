@@ -140,6 +140,7 @@
 
     # Games
     cataclysm-dda
+    prismlauncher
     #gzdoom
 
     # Art stuff
