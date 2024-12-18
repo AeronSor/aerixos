@@ -139,6 +139,7 @@
     #bsnes-hd
 
     # Games
+    gamescope
     cataclysm-dda
     prismlauncher
     #gzdoom
