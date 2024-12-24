@@ -423,7 +423,7 @@
   boot.blacklistedKernelModules = ["nouveau"];
 
   # Enable Sysrq
-  boot.kernel.sysctl."kernel.sysrq" = 502;
+  boot.kernel.sysctl."kernel.sysrq" = 1;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
