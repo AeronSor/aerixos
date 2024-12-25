@@ -51,6 +51,7 @@
     ranger
     zoxide
     python3
+    xdotool
 
     # Rust
     cargo
