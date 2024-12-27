@@ -219,7 +219,11 @@
     xorg.libXScrnSaver
     alsa-lib
     cups
+
+    # Hyperland stuff
     hyprpaper
+    wofi
+    wofi-emoji
   ];
 
   # Enable FHS spoofing

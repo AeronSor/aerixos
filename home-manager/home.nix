@@ -107,7 +107,7 @@
     mpd
     mpc-cli
     ncmpcpp
-    emote
+    #emote
     #thonny
     xwinwrap
     kcc
