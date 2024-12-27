@@ -219,12 +219,6 @@
     xorg.libXScrnSaver
     alsa-lib
     cups
-
-    # Hyperland stuff
-    hyprpaper
-    wofi
-    wofi-emoji
-    eww
   ];
 
   # Enable FHS spoofing
@@ -275,6 +269,12 @@
     zip
     unzip
     unrar
+
+    # Hyperland stuff
+    hyprpaper
+    wofi
+    wofi-emoji
+    eww
   ];
 
   # Fonts
