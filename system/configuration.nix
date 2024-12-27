@@ -224,6 +224,7 @@
     hyprpaper
     wofi
     wofi-emoji
+    eww
   ];
 
   # Enable FHS spoofing
