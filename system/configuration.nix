@@ -219,6 +219,7 @@
     xorg.libXScrnSaver
     alsa-lib
     cups
+    hyprpaper
   ];
 
   # Enable FHS spoofing
