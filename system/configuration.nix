@@ -115,21 +115,33 @@
   services.xserver = {
     enable = true;
 
-    # X11 Keymap
-    xkb.layout = "br";
-
     # Display manager
-    displayManager.lightdm = {
+    displayManager.gdm = {
       enable = true;
-      greeters.slick.enable = true;
-      greeters.slick.theme.name = "rose-pine-gtk";
     };
 
+    # X11 Keymap
+    #  xkb.layout = "br";
+
+    #displayManager.lightdm = {
+    #  enable = true;
+    #  greeters.slick.enable = true;
+    #  greeters.slick.theme.name = "rose-pine-gtk";
+    #};
     # Window manager
-    windowManager.awesome = {
-      enable = true;
-    };
+    #windowManager.awesome = {
+    #  enable = true;
+    #};
   };
+
+  # Enable wayland
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Remove mouse acceleration
   services.libinput.mouse.accelProfile = "flat";
@@ -361,7 +373,9 @@
   hardware.nvidia = {
     open = false;
     nvidiaSettings = false;
-    #modesetting.enable = true;
+
+    # required for wayland
+    modesetting.enable = true;
   };
 
   hardware.nvidia.package = let
