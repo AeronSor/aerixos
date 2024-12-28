@@ -111,6 +111,7 @@
     #thonny
     xwinwrap
     kcc
+    pywal
 
     # Wine stuff
     wineWowPackages.staging
