@@ -138,7 +138,7 @@
 
   programs.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    xwayland.enable = false;
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
