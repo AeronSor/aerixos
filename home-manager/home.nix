@@ -111,7 +111,10 @@
     #thonny
     xwinwrap
     kcc
+
+    # Theming
     pywal
+    swww
 
     # Wine stuff
     wineWowPackages.staging
