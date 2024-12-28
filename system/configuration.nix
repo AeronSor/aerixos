@@ -278,6 +278,7 @@
     wl-clipboard
     jq
     socat
+    nwg-look
 
     (
       pkgs.waybar.overrideAttrs (oldAttrs: {
