@@ -270,11 +270,12 @@
     unzip
     unrar
 
-    # Hyperland stuff
+    # Hyprland stuff
     hyprpaper
     wofi
     wofi-emoji
     eww
+    cliphist
   ];
 
   # Fonts
