@@ -278,6 +278,12 @@
     wl-clipboard
     jq
     socat
+
+    (
+      pkgs.waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
+      })
+    )
   ];
 
   # Fonts
@@ -332,7 +338,7 @@
   ];
 
   # Enable waybar
-  programs.waybar.enable = true;
+  #programs.waybar.enable = true;
 
   # Enable gvfs
   services.gvfs.enable = true;
