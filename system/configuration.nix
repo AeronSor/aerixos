@@ -276,6 +276,8 @@
     wofi-emoji
     eww
     wl-clipboard
+    jq
+    socat
   ];
 
   # Fonts
