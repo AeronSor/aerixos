@@ -123,11 +123,12 @@
     # X11 Keymap
     #  xkb.layout = "br";
 
-    #displayManager.lightdm = {
+    # displayManager.lightdm = {
     #  enable = true;
     #  greeters.slick.enable = true;
     #  greeters.slick.theme.name = "rose-pine-gtk";
     #};
+
     # Window manager
     #windowManager.awesome = {
     #  enable = true;
