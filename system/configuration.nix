@@ -275,7 +275,7 @@
     wofi
     wofi-emoji
     eww
-    cliphist
+    wl-clipboard
   ];
 
   # Fonts
