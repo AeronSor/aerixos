@@ -331,6 +331,9 @@
     xfce.tumbler
   ];
 
+  # Enable waybar
+  programs.waybar.enable = true;
+
   # Enable gvfs
   services.gvfs.enable = true;
 
