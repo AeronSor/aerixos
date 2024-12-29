@@ -38,7 +38,7 @@
   };
 
   # Allow flatpak
-  #services.flatpak.enable = true;
+  services.flatpak.enable = true;
 
   # Allow Appimages to be ran with appimage-run by default
   programs.appimage.binfmt = true;
@@ -116,33 +116,20 @@
     enable = true;
 
     # Display manager
-    displayManager.gdm = {
+    displayManager.lightdm = {
       enable = true;
+      greeters.slick.enable = true;
+      greeters.slick.theme.name = "rose-pine-gtk";
     };
 
     # X11 Keymap
-    #  xkb.layout = "br";
+    xkb.layout = "br";
 
-    # displayManager.lightdm = {
-    #  enable = true;
-    #  greeters.slick.enable = true;
-    #  greeters.slick.theme.name = "rose-pine-gtk";
-    #};
-
-    # Window manager
-    #windowManager.awesome = {
-    #  enable = true;
-    #};
+    #Window manager
+    windowManager.awesome = {
+      enable = true;
+    };
   };
-
-  # Enable wayland
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = false;
-  };
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Remove mouse acceleration
   services.libinput.mouse.accelProfile = "flat";
@@ -272,20 +259,14 @@
     unrar
 
     # Hyprland stuff
-    hyprpaper
-    wofi
-    wofi-emoji
-    eww
-    wl-clipboard
-    jq
-    socat
-    nwg-look
-
-    (
-      pkgs.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-      })
-    )
+    #hyprpaper
+    #wofi
+    #wofi-emoji
+    #eww
+    #wl-clipboard
+    #jq
+    #socat
+    #nwg-look
   ];
 
   # Fonts
@@ -338,9 +319,6 @@
     xfce.thunar-archive-plugin
     xfce.tumbler
   ];
-
-  # Enable waybar
-  #programs.waybar.enable = true;
 
   # Enable gvfs
   services.gvfs.enable = true;
@@ -395,7 +373,7 @@
     nvidiaSettings = false;
 
     # required for wayland
-    modesetting.enable = true;
+    modesetting.enable = false;
   };
 
   hardware.nvidia.package = let
