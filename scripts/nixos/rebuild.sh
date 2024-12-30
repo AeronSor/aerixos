@@ -6,8 +6,8 @@ pushd ~/Repos/aerixos/	# Change directory and save the earlier one to the stack
 # Editing
 ranger
 
-# Checking code with alejandra formatter
-alejandra . &>/dev/null
+# Checking code with alejandra formatter (this is removing my error messages sometimes)
+#alejandra . &>/dev/null
 
 # Showing changes
 git diff -U0 hosts/aeron/*.nix

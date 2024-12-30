@@ -458,6 +458,22 @@
 
   # SystemD
 
+  # --- Services --- #
+
+  # New year service
+  systemd.services."new-year" = {
+    description = "Runs a script on new year :)";
+    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/holidays/new-year.sh";
+
+    serviceConfig.User = "aeron";
+    serviceConfig.Restart = "no";
+
+    serviceConfig.Environment = [
+      "DISPLAY=:0" # Specifying display
+      "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" # Specify the DBus session path
+    ];
+  };
+
   # Eye break service
   systemd.services."eye-break" = {
     description = "Eye break notifcation";
@@ -507,6 +523,19 @@
       "PATH=${pkgs.dunst}/bin:${pkgs.bash}/bin:/run/current-system/sw/bin:$PATH"
       "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" # Specify the DBus session path
     ];
+  };
+
+  # --- Timers --- #
+
+  # New year timer
+  systemd.timers."new-year-timer" = {
+    description = "Runs every new year :)";
+    wantedBy = ["timers.target"];
+
+    timerConfig = {
+      OnCalendar = "*-01-01 00:00:00";
+      Unit = "new-year.service";
+    };
   };
 
   # 15 break timer
