@@ -161,8 +161,12 @@
   };
 
   # Enable bluetooth
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth = {
+    enable = true;
+    package = pkgs.bluez;
+    powerOnBoot = true;
+    #input.General.ClassicBondedOnly = false;
+  };
   services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
