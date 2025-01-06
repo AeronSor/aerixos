@@ -24,8 +24,14 @@
     };
   };
 
-  # Flakes
-  musnix.enable = true;
+  # --- Flakes --- #
+
+  # Musnix
+  musnix = {
+    enable = true;
+    rtcqs.enable = true;
+    soundcardPciId = "0000:00:1f.3";
+  };
 
   # Overlays
   nixpkgs.overlays = [
