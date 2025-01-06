@@ -14,12 +14,15 @@
     aeronvim-nix = {
       url = "github:AeronSor/aeronvim-nix";
     };
+
+    musnix = { url = "github:musnix/musnix"; };
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     aeronvim-nix,
+    musnix,
     ...
   }: {
     nixosConfigurations = {
