@@ -24,6 +24,9 @@
     };
   };
 
+  # Flakes
+  musnix.enable = true;
+
   # Overlays
   nixpkgs.overlays = [
     # For my nvim config

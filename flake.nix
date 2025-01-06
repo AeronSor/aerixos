@@ -31,6 +31,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./system/configuration.nix
+          musnix.nixosModules.musnix
 
           # Setup Home manager
           # home-manager.nixosModules.home-manager
