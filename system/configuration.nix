@@ -449,6 +449,7 @@
 
   # Enable Sysrq
   boot.kernel.sysctl."kernel.sysrq" = 1;
+  boot.kernel.sysctl."fs.file-max" = 524288;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

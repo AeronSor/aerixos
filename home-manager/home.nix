@@ -69,9 +69,7 @@
     ngspice
     arduino-ide
     fritzing
-
-    gsettings-desktop-schemas
-    processing
+    #processing
 
     # Audio production
     puredata
@@ -81,6 +79,7 @@
     renoise
     milkytracker
     carla
+    plugdata
     #yabridge
     #yabridgectl
 
