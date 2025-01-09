@@ -106,7 +106,7 @@
     mpd
     mpc-cli
     ncmpcpp
-    #emote
+    emote
     #thonny
     xwinwrap
     kcc
@@ -120,20 +120,22 @@
     winetricks
     #wineasio
 
+    # Random
     syncthing
     stremio
     libreoffice
-    hunspell
-    hunspellDicts.pt_BR
-    hunspellDicts.en_US
     lutris
     easyrpg-player
     foliate
     losslesscut-bin
-    #zeal
-    #nicotine-plus
-    #gmic-qt
+    nicotine-plus
     xournalpp
+    #gmic-qt
+    #zeal
+
+    hunspell
+    hunspellDicts.pt_BR
+    hunspellDicts.en_US
 
     # Emulators
     pcsx2
