@@ -155,7 +155,7 @@
   xdg.mime = {
     enable = true;
     defaultApplications = {
-      "inode/directory" = ["Thunar.desktop"];
+      "inode/directory" = "Thunar.desktop";
     };
 
     addedAssociations = {
