@@ -47,7 +47,7 @@
   };
 
   # Allow flatpak
-  services.flatpak.enable = false;
+  services.flatpak.enable = true;
 
   # Allow Appimages to be ran with appimage-run by default
   programs.appimage.binfmt = true;
