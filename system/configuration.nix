@@ -47,7 +47,7 @@
   };
 
   # Allow flatpak
-  services.flatpak.enable = true;
+  services.flatpak.enable = false;
 
   # Allow Appimages to be ran with appimage-run by default
   programs.appimage.binfmt = true;
@@ -157,7 +157,15 @@
     defaultApplications = {
       "inode/directory" = ["Thunar.desktop"];
     };
+
+    addedAssociations = {
+      "application/pdf" = "firefox.desktop";
+      "text/xml" = [
+        "neovide.desktop"
+      ];
+    };
   };
+
 
   # Pipewire Sound config
   security.rtkit.enable = true;
