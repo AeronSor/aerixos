@@ -37,6 +37,7 @@
     kitty
     font-manager
     pavucontrol
+    myxer
     htop
     acpi
     imv
