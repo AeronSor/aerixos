@@ -292,8 +292,9 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    terminus-nerdfont
-    nerdfonts
+    # Nerd fonts
+    nerd-fonts.terminess-ttf
+
     noto-fonts-cjk-serif
     hackgen-nf-font
     ipafont
