@@ -44,6 +44,7 @@
     mpv
     brightnessctl
     helvum
+    raysession
     distrobox
     appimage-run
     lua
