@@ -113,6 +113,7 @@
     xwinwrap
     kcc
     spotify
+    waydroid
 
     # Theming
     pywal
