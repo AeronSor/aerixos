@@ -8,12 +8,16 @@
   pkgs,
   inputs,
   ...
-}: {
+}: 
+
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./main-user.nix
     inputs.home-manager.nixosModules.default
+
+    ./packages.nix
   ];
 
   # Home manager
@@ -235,61 +239,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; let
-    RStudio-with-my-packages = rstudioWrapper.override {
-      packages = with rPackages; [
-        dplyr
-        tidyr
-        stringr
-        lubridate
-        httr
-        ggvis
-        ggplot2
-        shiny
-        rio
-        rmarkdown
-        tidyverse
-        EnvStats
-      ];
-    };
-  in [
-    #Overrides
-    RStudio-with-my-packages
-
-    # Base
-    wget
-    git
-    xclip
-    alsa-utils
-    networkmanagerapplet
-    dunst
-    mtpfs
-    jmtpfs
-    wireplumber
-    gcc
-    fuse
-    ntfs3g
-    lxqt.lxqt-policykit
-
-    # Utils
-    lshw
-    bcc
-    p7zip
-    zip
-    unzip
-    unrar
-
-    # Hyprland stuff
-    #hyprpaper
-    #wofi
-    #wofi-emoji
-    #eww
-    #wl-clipboard
-    #jq
-    #socat
-    #nwg-look
-  ];
-
+ 
   # Fonts
   fonts.packages = with pkgs; [
     # Nerd fonts
