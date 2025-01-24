@@ -2,13 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 # Test
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}: 
+{ config, lib, pkgs, inputs, ... }: 
 
 {
   imports = [
@@ -19,6 +13,8 @@
 
     ./packages.nix
     ./on-the-go.nix
+    ./x11.nix
+    ./fonts.nix
   ];
 
   # Home manager
@@ -125,26 +121,7 @@
     #useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-
-    # Display manager
-    displayManager.lightdm = {
-      enable = true;
-      greeters.slick.enable = true;
-      greeters.slick.theme.name = "rose-pine-gtk";
-    };
-
-    # X11 Keymap
-    xkb.layout = "br";
-
-    #Window manager
-    windowManager.awesome = {
-      enable = true;
-    };
-  };
-
+  
   # Remove mouse acceleration
   services.libinput.mouse.accelProfile = "flat";
 

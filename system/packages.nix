@@ -39,6 +39,7 @@
       fuse
       ntfs3g
       lxqt.lxqt-policykit
+      ripgrep
 
       # Utils
       lshw
