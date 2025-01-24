@@ -23,9 +23,9 @@
   zoxide
   python3
   xdotool
-  sublime
+  sublime4
 
-  # Rust
+    # Rust
   cargo
   rustc
 
