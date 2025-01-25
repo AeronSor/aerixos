@@ -70,9 +70,9 @@ export LESS="--RAW-CONTROL-CHARS"
 
 
 # Some misc exports
-export EDITOR=nvim
 export PICO_SDK_PATH=$HOME/Projects/Coding/Pico/pico-lib/pico-sdk/
 export PICO_EXTRAS_PATH=$HOME/Projects/Coding/Pico/pico-lib/pico-extras/
 
+# Enable zoxide
 eval "$(zoxide init bash)"
 

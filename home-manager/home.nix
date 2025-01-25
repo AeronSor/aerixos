@@ -48,6 +48,7 @@
   programs.bash = {
     enable = true;
     # Make the .bashrc import itself from the aerixos folder
+    # Why did I put this if though...
     initExtra = ''
       if [ -f $HOME/.dotfiles-general/bash/.bashrc ];
       then
