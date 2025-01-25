@@ -26,12 +26,6 @@
   # Neovim
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
-  };
-
-  # Helix
-  programs.helix = {
-    enable = true;
   };
 
   # Handle neovim packages with nixpkgs instead of mason or other plugin
@@ -63,7 +57,6 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "nvim";
   };
 
   # Cursor theming
