@@ -4,7 +4,7 @@ set -e	# If something fails stop process
 pushd ~/Repos/aerixos/	# Change directory and save the earlier one to the stack
 
 # Editing
-ranger
+#ranger
 
 # Checking code with alejandra formatter (this is removing my error messages sometimes)
 #alejandra . &>/dev/null
