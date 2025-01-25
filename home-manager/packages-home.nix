@@ -82,7 +82,8 @@
     xwinwrap
     kcc
     spotify
-    element
+    element # This is so fucking cool
+    element-desktop
 
     # Theming
     pywal
