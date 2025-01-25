@@ -23,7 +23,6 @@
   zoxide
   python3
   xdotool
-  sublime4
 
     # Rust
   cargo

@@ -10,6 +10,12 @@
   # You should not change this value, even if you update Home Manager. If you do
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  # Import modules
+  imports = [
+    ./packages-home.nix
+    ./helix.nix
+  ];
+
   # Git config
   programs.git = {
     enable = true;
