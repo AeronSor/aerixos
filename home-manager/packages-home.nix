@@ -155,6 +155,7 @@
     xorg.xinit
     ventoy
     ncdu
+    arrpc
     #epsonscan2
 
     # LSPs for Neovim
