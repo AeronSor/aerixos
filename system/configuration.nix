@@ -1,8 +1,8 @@
-## Edit this configuration file to define what should be installed on
+# # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 # Test
-{ config, lib, pkgs, inputs, ... }: 
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -15,14 +15,13 @@
     ./on-the-go.nix
     ./x11.nix
     ./fonts.nix
+    ./arrpc.nix
   ];
 
   # Home manager
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "aeron" = import ../home-manager/home.nix;
-    };
+    extraSpecialArgs = { inherit inputs; };
+    users = { "aeron" = import ../home-manager/home.nix; };
   };
 
   # --- Flakes --- #
@@ -54,7 +53,7 @@
   programs.appimage.binfmt = true;
 
   # Allow experimental features
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Disable systemd-boot loader and setup GRUB
   boot.loader.systemd-boot.enable = false;
@@ -80,9 +79,7 @@
   };
 
   # Enable automatic storage optimization
-  nix.optimise = {
-    automatic = true;
-  };
+  nix.optimise = { automatic = true; };
 
   # Use GRUB
   boot.loader.grub = {
@@ -103,7 +100,7 @@
     enable = true;
 
     # Custom DNS
-    insertNameservers = ["1.1.1.1" "1.0.0.1"];
+    insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
   };
 
   # Set your time zone.
@@ -121,7 +118,6 @@
     #useXkbConfig = true; # use xkb.options in tty.
   };
 
-  
   # Remove mouse acceleration
   services.libinput.mouse.accelProfile = "flat";
 
@@ -130,24 +126,19 @@
 
   # Enable XDG Desktop portals
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   xdg.portal.config.common.default = "*";
 
   # Enable xdg mime and set defaults
   xdg.mime = {
     enable = true;
-    defaultApplications = {
-      "inode/directory" = "Thunar.desktop";
-    };
+    defaultApplications = { "inode/directory" = "Thunar.desktop"; };
 
     addedAssociations = {
       "application/pdf" = "firefox.desktop";
-      "text/xml" = [
-        "neovide.desktop"
-      ];
+      "text/xml" = [ "neovide.desktop" ];
     };
   };
-
 
   # Pipewire Sound config
   security.rtkit.enable = true;
@@ -217,7 +208,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
- 
+
   # Fonts
   fonts.packages = with pkgs; [
     # Nerd fonts
@@ -233,29 +224,16 @@
 
   # Default fonts
   fonts.fontconfig.defaultFonts = {
-    monospace = [
-      "DejaVu Sans Mono"
-      "IPAGothic"
-    ];
-    sansSerif = [
-      "DejaVu Sans"
-      "IPAGothic"
-    ];
-    serif = [
-      "DejaVu Serif"
-      "IPAPMincho"
-    ];
+    monospace = [ "DejaVu Sans Mono" "IPAGothic" ];
+    sansSerif = [ "DejaVu Sans" "IPAGothic" ];
+    serif = [ "DejaVu Serif" "IPAPMincho" ];
   };
 
   # IME enalbing
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-      fcitx5-configtool
-    ];
+    fcitx5.addons = with pkgs; [ fcitx5-mozc fcitx5-gtk fcitx5-configtool ];
   };
 
   # Environment Variables
@@ -289,7 +267,8 @@
 
   # Protonup path
   environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/aeron/.steam/steam/compatibilitytools.d";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "/home/aeron/.steam/steam/compatibilitytools.d";
   };
 
   # Power management (Kinda bugged atm)
@@ -317,7 +296,7 @@
   hardware.graphics.enable = true;
 
   # NVIDIA (default offload mode)
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     open = false;
     nvidiaSettings = false;
@@ -327,15 +306,14 @@
   };
 
   hardware.nvidia.package = let
-  in
-    config.boot.kernelPackages.nvidiaPackages.mkDriver {
-      version = "560.35.03";
-      sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
-      sha256_aarch64 = "sha256-s8ZAVKvRNXpjxRYqM3E5oss5FdqW+tv1qQC2pDjfG+s=";
-      openSha256 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
-      settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
-      persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
-    };
+  in config.boot.kernelPackages.nvidiaPackages.mkDriver {
+    version = "560.35.03";
+    sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
+    sha256_aarch64 = "sha256-s8ZAVKvRNXpjxRYqM3E5oss5FdqW+tv1qQC2pDjfG+s=";
+    openSha256 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
+    settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
+    persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
+  };
 
   hardware.nvidia.prime = {
     sync.enable = true;
@@ -351,8 +329,8 @@
     intelBusId = "PCI:0:2:0";
   };
 
-    # Blacklist kernel modules
-  boot.blacklistedKernelModules = ["nouveau"];
+  # Blacklist kernel modules
+  boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Enable Sysrq
   boot.kernel.sysctl."kernel.sysrq" = 1;
@@ -384,7 +362,8 @@
   # New year service
   systemd.services."new-year" = {
     description = "Runs a script on new year :)";
-    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/holidays/new-year.sh";
+    serviceConfig.ExecStart =
+      "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/holidays/new-year.sh";
 
     serviceConfig.User = "aeron";
     serviceConfig.Restart = "no";
@@ -399,7 +378,8 @@
   systemd.services."eye-break" = {
     description = "Eye break notifcation";
     # Path of script
-    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
+    serviceConfig.ExecStart =
+      "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/eye-break.sh";
 
     serviceConfig.User = "aeron";
     serviceConfig.Restart = "no";
@@ -416,7 +396,8 @@
   systemd.services."water-break" = {
     description = "Water break notifcation";
     # Path of script
-    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/water-break.sh";
+    serviceConfig.ExecStart =
+      "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/water-break.sh";
 
     serviceConfig.User = "aeron";
     serviceConfig.Restart = "no";
@@ -433,7 +414,8 @@
   systemd.services."stretch-break" = {
     description = "Eye break notifcation";
     # Path of script
-    serviceConfig.ExecStart = "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/stretch-break.sh";
+    serviceConfig.ExecStart =
+      "${pkgs.bash}/bin/bash /home/aeron/Repos/aerixos/scripts/reminders/stretch-break.sh";
 
     serviceConfig.User = "aeron";
     serviceConfig.Restart = "no";
@@ -451,7 +433,7 @@
   # New year timer
   systemd.timers."new-year-timer" = {
     description = "Runs every new year :)";
-    wantedBy = ["timers.target"];
+    wantedBy = [ "timers.target" ];
 
     timerConfig = {
       OnCalendar = "*-01-01 00:00:00";
@@ -462,7 +444,7 @@
   # 15 break timer
   systemd.timers."break-30-timer" = {
     description = "Run every 30 minutes";
-    wantedBy = ["timers.target"];
+    wantedBy = [ "timers.target" ];
 
     timerConfig = {
       OnCalendar = "*:0/30";
@@ -472,7 +454,7 @@
 
   systemd.timers."break-35-timer" = {
     description = "Run every 35 minutes";
-    wantedBy = ["timers.target"];
+    wantedBy = [ "timers.target" ];
 
     timerConfig = {
       OnCalendar = "*:0/35";
@@ -482,7 +464,7 @@
 
   systemd.timers."break-1h-timer" = {
     description = "Run every 1 hour";
-    wantedBy = ["timers.target"];
+    wantedBy = [ "timers.target" ];
 
     timerConfig = {
       OnCalendar = "*-*-* *:00:00";
