@@ -6,7 +6,7 @@
     defaultEditor = true;
 
     settings = {
-      theme = "sonokai";
+      theme = "ayu_dark";
 
     };
 
