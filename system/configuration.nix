@@ -15,7 +15,7 @@
     ./on-the-go.nix
     ./x11.nix
     ./fonts.nix
-    ./arrpc.nix
+    # ./arrpc.nix
   ];
 
   # Home manager

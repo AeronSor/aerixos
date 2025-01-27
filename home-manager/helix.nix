@@ -8,6 +8,17 @@
     settings = {
       theme = "ayu_dark";
 
+      editor = {
+        line-number = "relative";
+        lsp.display-messages = true;
+      };
+
+      editor.indent-guides = {
+        render = true;
+        character = "|";
+        skip-levels = 1;
+      };
+
     };
 
     languages.language = [{
