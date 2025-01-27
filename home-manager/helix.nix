@@ -11,14 +11,8 @@
       editor = {
         line-number = "relative";
         lsp.display-messages = true;
+        indent-guides.render = true;
       };
-
-      editor.indent-guides = {
-        render = true;
-        character = "╎";
-        skip-levels = 1;
-      };
-
     };
 
     languages.language = [{
