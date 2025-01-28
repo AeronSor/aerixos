@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: 
+{ config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -11,10 +11,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   # Import modules
-  imports = [
-    ./packages-home.nix
-    ./helix.nix
-  ];
+  imports = [ ./packages-home.nix ./helix.nix ];
 
   # Git config
   programs.git = {
@@ -24,21 +21,16 @@
   };
 
   # Neovim
-  programs.neovim = {
-    enable = true;
-  };
+  programs.neovim = { enable = true; };
 
-  # Handle neovim packages with nixpkgs instead of mason or other plugin
-  # Why? it makes more sense in a nixOS system and this way I can avoid
-  # messing with my stock neovim config
-  #plugins = with pkgs.vimPlugins; [
-  #];
-  #}
+  # arRPC
+  services.arrpc.enable = true;
 
   home.file = {
     #Set the DPI
     ".Xresources" = {
-      text = ''        Xft.dpi: 110 
+      text = ''
+        Xft.dpi: 110 
         Xcursor.size: 24
         Xcursor.theme: Bibata-Modern-Ice'';
       executable = false;
@@ -57,8 +49,7 @@
     '';
   };
 
-  home.sessionVariables = {
-  };
+  home.sessionVariables = { };
 
   # Cursor theming
   home.pointerCursor = {

@@ -15,7 +15,6 @@
     ./on-the-go.nix
     ./x11.nix
     ./fonts.nix
-    # ./arrpc.nix
   ];
 
   # Home manager
@@ -23,8 +22,6 @@
     extraSpecialArgs = { inherit inputs; };
     users = { "aeron" = import ../home-manager/home.nix; };
   };
-
-  # --- Flakes --- #
 
   # Musnix
   musnix = {
