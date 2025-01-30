@@ -6,7 +6,6 @@
     kitty
     font-manager
     pavucontrol
-    myxer
     htop
     acpi
     imv
@@ -61,7 +60,6 @@
     obsidian
     neovide
     vscode
-    flameshot
     mangohud
     protonup
     keepassxc
@@ -72,22 +70,18 @@
     sioyek
     calibre
     ffmpeg
-    #glaxnimate
     neofetch
     mpd
     mpc-cli
     ncmpcpp
-    emote
     #thonny
     xwinwrap
-    kcc
     spotify
     element # This is so fucking cool
     element-desktop
 
     # Theming
     pywal
-    swww
 
     # Wine stuff
     wineWowPackages.staging
@@ -99,11 +93,8 @@
     stremio
     libreoffice
     lutris
-    easyrpg-player
-    foliate
     losslesscut-bin
     nicotine-plus
-    xournalpp
     #gmic-qt
     #zeal
 
@@ -119,7 +110,6 @@
     #bsnes-hd
 
     # Games
-    gamescope
     cataclysm-dda
     prismlauncher
     #gzdoom
@@ -136,23 +126,17 @@
     godot_4
 
     # Utils
-    unclutter-xfixes
     nvtopPackages.nvidia
     vulkan-tools
     alejandra
-    lxappearance
     nix-tree
     yt-dlp
     gparted
-    xorg.xmodmap
     slop
     maim
-    picom-pijulius
     pciutils
     glxinfo
     pkgs.autoAddDriverRunpath
-    xorg.xev
-    xorg.xinit
     ventoy
     ncdu
     arrpc

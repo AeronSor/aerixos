@@ -1,25 +1,26 @@
 { config, lib, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; let
+  environment.systemPackages = with pkgs;
+    let
 
-    # Rstudio Libraries
-    RStudio-with-my-packages = rstudioWrapper.override {
-      packages = with rPackages; [
-        dplyr
-        tidyr
-        stringr
-        lubridate
-        httr
-        ggvis
-        ggplot2
-        shiny
-        rio
-        rmarkdown
-        tidyverse
-        EnvStats
-      ];
-    };
+      # Rstudio Libraries
+      RStudio-with-my-packages = rstudioWrapper.override {
+        packages = with rPackages; [
+          dplyr
+          tidyr
+          stringr
+          lubridate
+          httr
+          ggvis
+          ggplot2
+          shiny
+          rio
+          rmarkdown
+          tidyverse
+          EnvStats
+        ];
+      };
 
     in [
       #Overrides
@@ -28,7 +29,6 @@
       # Base
       wget
       git
-      xclip
       alsa-utils
       networkmanagerapplet
       dunst

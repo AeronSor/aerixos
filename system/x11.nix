@@ -16,8 +16,21 @@
     xkb.layout = "br";
 
     #Window manager
-    windowManager.awesome = {
-      enable = true;
-    };
+    windowManager.awesome = { enable = true; };
   };
+
+  # Specific X11 packages
+  environment.systemPackages = with pkgs; [
+    xclip
+    flameshot
+    emote
+    xwinwrap
+    xournalpp
+    unclutter-xfixes
+    lxappearance
+    xorg.xmodmap
+    picom-pijulius
+    xorg.xev
+    xorg.xinit
+  ];
 }
