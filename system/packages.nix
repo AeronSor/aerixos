@@ -48,15 +48,5 @@
       zip
       unzip
       unrar
-
-      # Hyprland stuff
-      #hyprpaper
-      #wofi
-      #wofi-emoji
-      #eww
-      #wl-clipboard
-      #jq
-      #socat
-      #nwg-look
     ];
 }

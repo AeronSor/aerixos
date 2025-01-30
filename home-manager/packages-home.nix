@@ -140,7 +140,6 @@
     ventoy
     ncdu
     arrpc
-    #epsonscan2
 
     # LSPs for Neovim
     rust-analyzer
@@ -148,6 +147,10 @@
     luajitPackages.lua-lsp
     gopls
     pyright
+
+    # Printing
+    epson-escpr
+    epsonscan2
   ];
 
 }
